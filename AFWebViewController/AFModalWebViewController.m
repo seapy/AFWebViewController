@@ -82,6 +82,7 @@
     
     self.webViewController.title = self.title;
     self.navigationBar.tintColor = self.barsTintColor;
+    self.webViewController.openExternalApp = self.openExternalApp;
 }
 
 - (void)setToolbarTintColor:(UIColor *)color {

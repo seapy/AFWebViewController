@@ -312,4 +312,21 @@
     [self updateToolbarItems];
 }
 
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    if (!self.openExternalApp) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSURL *url = navigationAction.request.URL;
+    NSArray *httpSchemes = @[@"http", @"https"];
+    if (![httpSchemes containsObject:url.scheme] && [app canOpenURL:url]) {
+        [app openURL:url];
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+
 @end

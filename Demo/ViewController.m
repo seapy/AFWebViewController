@@ -13,12 +13,14 @@
 @implementation ViewController
 
 - (IBAction)openWebView:(id)sender {
-    AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://google.com"];
+    AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"http://open.kakao.com/o/gyLape"];
+    webViewController.openExternalApp = YES;
     [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 - (IBAction)openWebViewModal:(id)sender {
-    AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
+    AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"http://open.kakao.com/o/gyLape"];
+    webViewController.openExternalApp = YES;
     [self presentViewController:webViewController animated:YES completion:NULL];
 }
 @end

@@ -94,4 +94,9 @@
  */
 @property (nonatomic, strong) UIColor *toolbarTintColor;
 
+/**
+ *  Open exteranl application
+ */
+@property (nonatomic, assign) BOOL openExternalApp;
+
 @end
