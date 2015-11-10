@@ -16,6 +16,7 @@
 		5F8F08001A113F35002D45B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F07F91A113F35002D45B8 /* main.m */; };
 		5F8F08011A113F35002D45B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F07FA1A113F35002D45B8 /* Main.storyboard */; };
 		5F8F08021A113F35002D45B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F07FC1A113F35002D45B8 /* ViewController.m */; };
+		945072461BF1C8E5000144C3 /* NotificationScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 945072451BF1C8E5000144C3 /* NotificationScriptMessageHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		5F8F07FA1A113F35002D45B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Demo/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		5F8F07FB1A113F35002D45B8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Demo/ViewController.h; sourceTree = SOURCE_ROOT; };
 		5F8F07FC1A113F35002D45B8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Demo/ViewController.m; sourceTree = SOURCE_ROOT; };
+		945072441BF1C8E5000144C3 /* NotificationScriptMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationScriptMessageHandler.h; path = Demo/NotificationScriptMessageHandler.h; sourceTree = SOURCE_ROOT; };
+		945072451BF1C8E5000144C3 /* NotificationScriptMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationScriptMessageHandler.m; path = Demo/NotificationScriptMessageHandler.m; sourceTree = SOURCE_ROOT; };
 		D7B8E1A7D66DDBC84894A274 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAC1D0B093BE8483684C059 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +100,8 @@
 				5F8F07FA1A113F35002D45B8 /* Main.storyboard */,
 				5F8F07FB1A113F35002D45B8 /* ViewController.h */,
 				5F8F07FC1A113F35002D45B8 /* ViewController.m */,
+				945072441BF1C8E5000144C3 /* NotificationScriptMessageHandler.h */,
+				945072451BF1C8E5000144C3 /* NotificationScriptMessageHandler.m */,
 				5F8F07C41A0FC86F002D45B8 /* Supporting Files */,
 			);
 			path = AFWebViewController;
@@ -279,6 +284,7 @@
 				5F8F08021A113F35002D45B8 /* ViewController.m in Sources */,
 				5F8F07FD1A113F35002D45B8 /* AppDelegate.m in Sources */,
 				5F8F07F11A0FDA4D002D45B8 /* AFModalWebViewController.m in Sources */,
+				945072461BF1C8E5000144C3 /* NotificationScriptMessageHandler.m in Sources */,
 				5F8F08001A113F35002D45B8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

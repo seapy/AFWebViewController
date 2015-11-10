@@ -9,12 +9,22 @@
 #import "ViewController.h"
 #import "AFWebViewController.h"
 #import "AFModalWebViewController.h"
+#import <WebKit/WebKit.h>
+#import "NotificationScriptMessageHandler.h"
 
 @implementation ViewController
 
 - (IBAction)openWebView:(id)sender {
-    AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"http://open.kakao.com/o/gyLape"];
+    AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"http://localhost:8000/"];
     webViewController.openExternalApp = YES;
+    webViewController.actionUrl = [NSURL URLWithString:@"http://naver.com"];
+    
+    WKUserContentController *userController = [[WKUserContentController alloc] init];
+    [userController addScriptMessageHandler:[[NotificationScriptMessageHandler alloc] init] name:@"test"];
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    configuration.userContentController = userController;
+    webViewController.configuration = configuration;
+    
     [self.navigationController pushViewController:webViewController animated:YES];
 }
 

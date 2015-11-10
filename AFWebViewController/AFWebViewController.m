@@ -135,7 +135,11 @@
 
 - (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        if (self.configuration) {
+            _webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds configuration:self.configuration];
+        } else {
+            _webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        }
         _webView.navigationDelegate = self;
     }
     return _webView;
@@ -254,6 +258,9 @@
 
 - (void)actionButtonTapped:(id)sender {
     NSURL *url = self.webView.URL ?: self.request.URL;
+    if (self.actionUrl) {
+        url = self.actionUrl;
+    }
     if (url) {
         // More activities should be added in the future
         NSArray *activities = @[[TUSafariActivity new], [ARChromeActivity new]];

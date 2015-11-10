@@ -8,6 +8,7 @@
 
 @import UIKit;
 @class WKWebView;
+@class WKWebViewConfiguration;
 
 @interface AFWebViewController : UIViewController
 
@@ -97,5 +98,15 @@
  *  Open exteranl application
  */
 @property (nonatomic, assign) BOOL openExternalApp;
+
+/**
+ *  URL for Action Toolbar
+ */
+@property (nonatomic, strong) NSURL *actionUrl;
+
+/**
+ *  Configuration
+ */
+@property (nonatomic, strong) WKWebViewConfiguration *configuration;
 
 @end
